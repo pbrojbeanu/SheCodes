@@ -29,7 +29,7 @@
         color: darkblue;
       }
 
-      a.one:visited {
+      a.one:hover {
         color: darkblue;
       }
 
@@ -41,7 +41,7 @@
         color: red;
       }
 
-      a.two:visited {
+      a.two:hover {
         color: red;
       }
 
@@ -49,12 +49,24 @@
         color: green;
       }
 
-      a.three:visited {
+      a.three:hover {
         color: green;
       }
 
       a.three:visited {
         color: green;
+      }
+
+      a.button:link {
+        color: white;
+      }
+
+      a.button:visited {
+        color: darkblue;
+      }
+
+      a.button:hover {
+        color: rgb(209, 135, 209);
       }
 
       h4 {
@@ -65,18 +77,21 @@
         margin: 0 auto;
       }
       button {
+        color: white;
+        background: #947ac9;
         padding: 15px 30px;
         margin: 0 auto 30px auto;
-        background: #f6f2fe;
         font-size: 18px;
         display: block;
         border: 1px solid #885df1;
         border-radius: 30px;
         box-shadow: 1px 3px 3px rgb(73, 72, 72);
+        transition: all 200ms ease-in-out;
       }
 
       button:hover {
         cursor: pointer;
+        background: #885df1;
       }
     </style>
   </head>
@@ -85,7 +100,9 @@
     <h1>SheCodes</h1>
 
     <button>
-      <a href="https://www.shecodes.io/apply/" ; target="blank">Apply now</a>
+      <a class="button" href="https://www.shecodes.io/apply/" ; target="blank"
+        >Apply now</a
+      >
     </button>
 
     <h2>Coding workshops</h2>
