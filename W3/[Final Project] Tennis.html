@@ -11,7 +11,7 @@
         max-width: 1000px;
         margin: 20px auto;
         padding: 15px 60px;
-        background:#C8E6C9;
+        background: linear-gradient(0.25turn, #69F0AE, #CCFF90, #AEEA00);
         border-radius: 40px;  
 
       }
@@ -51,14 +51,14 @@
 }
     .textontop {
           font-size: 150%;
-          color:#4CAF50;
+          color:#218838;
 
     }
     .community {
 
             margin: 15px 10px;
             padding: 10px;
-            color:#f57f17; 
+            color:#FF3D00; 
             text-align: center;
             font-size: 120%;
 
@@ -122,7 +122,32 @@
         opacity: 0.7px;
         max-width: 100%;}
     
-  
+  .enroll-button {
+        padding: 30px;
+        margin: 50px auto;
+        display: block;   
+        font-size: 100%;
+        font-weight: bolder;
+        background: linear-gradient(0.25turn,#1B5E20, #00C953, #AEEA00, #EEFF41, #f4f5f4, #FFEB3B, #FF5722);
+        color:#004D40;
+        line-height: 15px;
+        border: 1px solid  #2E7D32;
+        border-radius: 30px;
+        box-shadow: 1px 3px 3px #CFD8DC;
+        transition: all 200ms ease-in-out;
+        
+      }
+
+    .enroll-button:hover {
+        cursor: pointer;
+        background: linear-gradient(0.25turn,#FF5722, #FFEB3B, #EEFF41, #f4f5f4, #AEEA00, #00C953,#1B5E20);
+        color: #DD2C00;
+        border: 1px solid  #2E7D32;
+        border-radius: 30px;
+        box-shadow: 1px 3px 3px rgb(47, 50, 59)
+      }
+
+
     </style>
   </head>
   <body>
@@ -250,27 +275,41 @@
     tournaments: The Australian Open, The French Open, Wimbledon and the US
     Open. </div > <br/> <div class= "contentparagraph">🎾 Venus and Serena Williams became the first set of sisters to ever
     win Olympic gold medals in tennis. </div> <br/>
-
     </p>
+
     <img class ="imgtennishistory" src="https://images.thestar.com/gjw3SYpTyRXTgXyuKEqsmL4JA6o=/1200x880/smart/filters:cb(2700061000)/https://www.thestar.com/content/dam/thestar/sports/tennis/2016/05/08/williams-sisters-aim-for-another-doubles-olympic-gold-in-rio/doubles.jpg" alt="sisters"/>
     <br/>
 
-    <h2 class = "effectonh2">
-        Pricing
 
-    </h2>
+<button class=enroll-button>
+    Enroll today
+</button>
         
-<br/>
-
-    <button class = enrollbutton>
-        Enroll today
-    </button>
-
-    <button class = moreinfobutton>
-        Got questions?
-    </button>
-
     </div>
-    <script></script>
+    <script>
+    function enroll() {
+        let fullName = prompt("Hi, Champion 🏆! What's your full name?");
+        let coordinates = prompt("Are you above 18 years old and close to any of the above locations" + "," + " " + fullName + " " + "?");
+          if (coordinates === "Yes" ||
+          coordinates === "YeS" || 
+          coordinates === "yES" ||
+          coordinates === "yeS" ||
+          coordinates === "yes" ||
+          coordinates === "yeah" ||
+          coordinates === "Yeah"||
+          coordinates === "Mhm" ||
+          coordinates === "mhm") {
+            alert("Amazing, let's continue" + "," + " " + fullName + " " + "!");
+
+             let email = prompt("You are very close! What's your email address" + "," + " " + fullName + " " + "?");
+              alert("Amazing, you champ! A tennis expert will be in touch soon!");
+               } else {
+            alert ("We're sorry, it seems you are below age, you parents or legal representative need to fill a form for you to join!");
+        }
+    }
+        let enrollButton = document.querySelector(".enroll-button");
+        enrollButton.addEventListener("click",  enroll);
+
+    </script>
   </body>
 </html>
